@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Four Boxes with Padding</title>
+  
+  <style>
+    .container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); 
+      grid-template-rows: repeat(2, 1fr);    
+      gap: 0px;                            
+      width: 600px;  /* Reduced from 100% */
+      height: 400px; /* Reduced from 100vh */
+      margin: 20px auto; /* Center the container */
+    }
+
+    .box {
+      background-color: rgb(0, 57, 121);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px; 
+      border: 2px solid #000;
+      box-sizing: border-box; 
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+
+    .box1 {
+      padding: 10px 20px 30px 40px;  
+    }
+
+    .box2 {
+      padding: 30px 40px 50px 60px;
+      flex-direction: column;
+      align-items: flex-start;
+      color: black;
+      background-color: #fff;
+    }
+
+    .box2 form {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .box2 input[type="text"],
+    .box2 input[type="email"],
+    .box2 input[type="password"],
+    .box2 input[type="submit"] {
+      margin-bottom: 10px;
+      padding: 8px;
+      font-size: 14px;
+    }
+
+    .box3 {
+      padding: 20px 30px 40px 50px;
+    }
+  </style>
+</head>
+<body>
+  <table border="1" align="center">
+   
+    <tr>
+      <td colspan="3" width="300" height="40" align="center">Header</td>
+    </tr>
+    </table>
+
+  <div class="container">
+    <div class="box box1">Box 1</div>
+    <div class="box box2">
+      <form>
+        <label>Username:</label>
+        <input type="text" name="username" required>
+
+        <label>Email:</label>
+        <input type="email" name="email" required>
+
+        <label>Password:</label>
+        <input type="password" name="password" required>
+
+        <label>Location:</label>
+        <input type="text" name="location">
+
+        <label>Zip Code:</label>
+        <input type="text" name="zip">
+
+        <label>
+          <input type="checkbox" name="agree"> I agree to the terms
+        </label>
+
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+
+    <div class="box box3">Box 3</div>
+    <div class="box box4">Box 4</div>
+  </div>
+
+</body>
+</html>
